@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relógio Digital</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <h1 aria-label="Relógio Digital"><i class="far fa-clock" aria-hidden="true"></i> Relógio Digital</h1>
+            <div class="controls">
+                <label for="formatToggle" class="sr-only">Alternar formato de hora</label>
+                <button id="formatToggle" class="btn-toggle" aria-pressed="false">24h</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="card">
+            <div id="msg" class="time-display" role="status" aria-live="polite">
+                <span class="time-label">Que horas são?</span>
+                <div class="time-value">Carregando...</div>
+                <div class="period-text">Verificando o período do dia...</div>
+            </div>
+
+            <div id="foto" class="image-container" aria-hidden="false">
+                <img id="imagem" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='12' fill='%23FFD54F'/></svg>" alt="Ilustração do período do dia" class="time-image">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; AlexSander</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
